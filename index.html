@@ -2,20 +2,36 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تعلم البرمجة بالعربية</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>تعلم البرمجة بالعربية</h1>
+  <main class="app">
+    <h1>تعلم البرمجة بالعربية</h1>
+    <p class="intro">دروس سهلة للمبتدئين مع أمثلة وأسئلة.</p>
 
-  <div id="lesson">
-    <h2>ما هي البرمجة؟</h2>
-    <p>البرمجة هي كتابة أوامر للكمبيوتر حتى ينفذها.</p>
-  </div>
+    <section class="card">
+      <h2 id="lessonTitle"></h2>
+      <p id="lessonText"></p>
 
-  <button onclick="showMessage()">اضغط هنا</button>
+      <h3>مثال الكود:</h3>
+      <pre><code id="lessonCode"></code></pre>
 
-  <p id="message"></p>
+      <h3>ماذا يفعل الكود؟</h3>
+      <p id="codeExplain"></p>
+    </section>
+
+    <section class="card">
+      <h2>سؤال الدرس</h2>
+      <p id="question"></p>
+      <div id="answers"></div>
+      <p id="result"></p>
+      <p>النقاط: <span id="score">0</span></p>
+    </section>
+
+    <button onclick="nextLesson()">الدرس التالي</button>
+  </main>
 
   <script src="script.js"></script>
 </body>
