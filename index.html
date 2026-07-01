@@ -9,9 +9,9 @@
 <body>
   <main class="app">
     <h1>تعلم البرمجة بالعربية</h1>
-    <p class="intro">دروس سهلة للمبتدئين مع أمثلة وأسئلة وشهادة إتمام.</p>
+    <p class="intro">دروس سهلة للمبتدئين مع اختبار نهائي وشهادة إتمام.</p>
 
-    <section class="card">
+    <section class="card" id="nameBox">
       <label for="studentName">اسم المتعلم:</label>
       <input id="studentName" type="text" placeholder="اكتب اسمك هنا">
     </section>
@@ -32,10 +32,18 @@
       <p id="question"></p>
       <div id="answers"></div>
       <p id="result"></p>
-      <p class="score">النقاط: <span id="score">0</span></p>
     </section>
 
     <button id="nextButton">الدرس التالي</button>
+
+    <section class="card final-result" id="finalResult">
+      <h2>النتيجة النهائية</h2>
+      <p>اسم المتعلم: <strong id="finalName"></strong></p>
+      <p>الإجابات الصحيحة: <strong id="finalScore"></strong></p>
+      <p>النسبة: <strong id="finalPercent"></strong></p>
+      <p id="finalMessage"></p>
+      <button id="restartButton">إعادة الاختبار</button>
+    </section>
 
     <section class="certificate-section" id="certificateSection">
       <div class="certificate">
