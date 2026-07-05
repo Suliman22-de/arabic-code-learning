@@ -48,8 +48,7 @@ const lessons = [
   {title:"border-radius",text:"يجعل الحواف مستديرة.",code:"button { border-radius: 8px; }",explain:"يستدير الزر.",question:"ما فائدة border-radius؟",answers:["تدوير الحواف","تغيير اللون","إخفاء العنصر"],correct:"تدوير الحواف"},
   {title:"display flex",text:"يساعد في ترتيب العناصر.",code:"div { display: flex; }",explain:"يرتب العناصر بمرونة.",question:"ما فائدة flex؟",answers:["ترتيب العناصر","حفظ البيانات","إنشاء دالة"],correct:"ترتيب العناصر"},
   {title:"JSON",text:"شكل لتخزين البيانات.",code:'{"name":"سالم"}',explain:"بيانات على شكل مفتاح وقيمة.",question:"ما فائدة JSON؟",answers:["تنظيم البيانات","تلوين الصفحة","تشغيل زر"],correct:"تنظيم البيانات"},
-  {title:"localStorage",text:"يحفظ بيانات في المتصفح.",code:"localStorage.setItem('name','سالم');",explain:"يحفظ الاسم.",question:"أين يحفظ localStorage؟",answers:["في المتصفح","في ملف CSS","في الصورة"],correct:"في المتصفح"},
-  {title:"المراجعة",text:"البرمجة تحتاج تدريبًا مستمرًا.",code:'console.log("استمر في التعلم");',explain:"يطبع رسالة تشجيع.",question:"ما أفضل طريقة لتعلم البرمجة؟",answers:["التطبيق العملي","الحفظ فقط","ترك التدريب"],correct:"التطبيق العملي"}
+  {title:"localStorage",text:"يحفظ بيانات في المتصفح.",code:"localStorage.setItem('name','سالم');",explain:"يحفظ الاسم.",question:"أين يحفظ localStorage؟",answers:["في المتصفح","في ملف CSS","في الصورة"],correct:"في المتصفح"}
 ];
 
 let current = 0;
@@ -204,6 +203,18 @@ function restartQuiz() {
   showLesson();
 }
 
+function openPracticeOnly() {
+  nameBox.style.display = "none";
+  lessonBox.style.display = "none";
+  quizBox.style.display = "none";
+  nextButton.style.display = "none";
+  finalResult.style.display = "none";
+  document.getElementById("certificateSection").style.display = "none";
+
+  practiceLab.style.display = "block";
+  practiceLab.scrollIntoView({ behavior: "smooth" });
+}
+
 runCodeButton.addEventListener("click", function() {
   try {
     codeOutput.textContent = "تم تشغيل الكود. إذا استخدمت alert ستظهر نافذة صغيرة.";
@@ -218,19 +229,9 @@ restartButton.addEventListener("click", restartQuiz);
 printButton.addEventListener("click", function() {
   window.print();
 });
-function openPracticeOnly() {
-  nameBox.style.display = "none";
-  lessonBox.style.display = "none";
-  quizBox.style.display = "none";
-  nextButton.style.display = "none";
-  finalResult.style.display = "none";
-  document.getElementById("certificateSection").style.display = "none";
-
-  practiceLab.style.display = "block";
-  practiceLab.scrollIntoView({ behavior: "smooth" });
-}
 
 if (window.location.hash === "#practice") {
   openPracticeOnly();
+} else {
+  showLesson();
 }
-showLesson();
