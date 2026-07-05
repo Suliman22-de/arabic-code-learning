@@ -216,9 +216,18 @@ function openPracticeOnly() {
 }
 
 runCodeButton.addEventListener("click", function() {
+  codeOutput.textContent = "";
+
+  function print(value) {
+    codeOutput.textContent = codeOutput.textContent + value + "\n";
+  }
+
   try {
-    codeOutput.textContent = "تم تشغيل الكود. إذا استخدمت alert ستظهر نافذة صغيرة.";
-    new Function(codeEditor.value)();
+    new Function("print", codeEditor.value)(print);
+
+    if (codeOutput.textContent.trim() === "") {
+      codeOutput.textContent = "تم تشغيل الكود، لكن لم يتم طباعة أي نتيجة. استخدم print لعرض النتيجة هنا.";
+    }
   } catch (error) {
     codeOutput.textContent = "يوجد خطأ في الكود: " + error.message;
   }
