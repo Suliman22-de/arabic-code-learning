@@ -184,3 +184,116 @@
     grid-template-columns: 1fr;
   }
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
+    linear-gradient(135deg, #dbeafe, #dcfce7, #fef3c7);
+  color: #222;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.app h1 {
+  color: #1d4ed8;
+  text-align: center;
+  font-size: 36px;
+}
+
+.intro {
+  text-align: center;
+  font-size: 18px;
+  color: #374151;
+}
+
+.card {
+  background-color: white;
+  padding: 22px;
+  margin: 18px 0;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  color: #1e40af;
+}
+
+.card h3 {
+  color: #166534;
+}
+
+.progress {
+  color: #92400e;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 170px;
+  direction: ltr;
+  text-align: left;
+  font-family: Consolas, monospace;
+}
+
+pre {
+  direction: ltr;
+  text-align: left;
+  background-color: #111827;
+  color: #e5e7eb;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 15px;
+}
+
+button {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  margin: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #15803d;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.answer-selected {
+  background-color: #1d4ed8;
+}
+
+#result {
+  font-weight: bold;
+  color: #1d4ed8;
+}
+
+.final-result,
+.practice-lab,
+.certificate-section {
+  display: none;
+}
