@@ -1,5 +1,18 @@
-.website {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:
+    linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
+    linear-gradient(135deg, #dbeafe, #dcfce7, #fef3c7);
+  color: #222;
   min-height: 100vh;
+}
+
+.website,
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .hero {
@@ -8,8 +21,6 @@
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 30px;
-  max-width: 1150px;
-  margin: 0 auto;
   padding: 70px 22px 40px;
 }
 
@@ -27,16 +38,15 @@
   margin-bottom: 16px;
 }
 
-.hero h1 {
-  margin: 0 0 18px;
-  font-size: 52px;
+.hero h1,
+.app h1 {
   color: #1d4ed8;
-  line-height: 1.25;
+  font-size: 42px;
+  line-height: 1.3;
 }
 
-.hero-text {
-  max-width: 760px;
-  margin: 0 0 26px;
+.hero-text,
+.intro {
   font-size: 20px;
   line-height: 1.9;
   color: #374151;
@@ -49,7 +59,8 @@
 }
 
 .start-link,
-.practice-link {
+.practice-link,
+button {
   display: inline-block;
   color: white;
   text-decoration: none;
@@ -57,9 +68,12 @@
   border-radius: 10px;
   font-size: 18px;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
-.start-link {
+.start-link,
+button {
   background-color: #16a34a;
 }
 
@@ -67,7 +81,8 @@
   background-color: #1d4ed8;
 }
 
-.start-link:hover {
+.start-link:hover,
+button:hover {
   background-color: #15803d;
 }
 
@@ -75,13 +90,18 @@
   background-color: #1e40af;
 }
 
-.code-preview {
+.code-preview,
+.app pre {
   direction: ltr;
+  text-align: left;
   background-color: #111827;
   color: #e5e7eb;
-  border-radius: 18px;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-  overflow: hidden;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+.code-preview {
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
 }
 
 .code-header {
@@ -106,28 +126,26 @@
   background-color: #4ade80;
 }
 
-.code-preview pre {
+.code-preview pre,
+.app pre {
   margin: 0;
-  padding: 28px;
-  background-color: transparent;
-  font-size: 20px;
+  padding: 22px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
 .features,
 .steps,
 .cta {
-  max-width: 1050px;
-  margin: 0 auto;
   padding: 45px 20px;
   text-align: center;
 }
 
 .features h2,
 .steps h2,
-.cta h2 {
+.cta h2,
+.card h2 {
   color: #1e40af;
-  font-size: 32px;
 }
 
 .features-grid,
@@ -139,15 +157,17 @@
 }
 
 .feature-card,
-.steps-list div {
+.steps-list div,
+.card {
   background-color: white;
   padding: 22px;
   border-radius: 14px;
   border: 1px solid #ddd;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.feature-card h3 {
+.feature-card h3,
+.card h3 {
   color: #166534;
 }
 
@@ -157,76 +177,17 @@
   line-height: 1.7;
 }
 
-.steps-list div {
-  font-weight: bold;
-}
-
-@media (max-width: 850px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-content {
-    text-align: center;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .features-grid,
-  .steps-list {
-    grid-template-columns: 1fr;
-  }
-}
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
-    linear-gradient(135deg, #dbeafe, #dcfce7, #fef3c7);
-  color: #222;
-  min-height: 100vh;
-}
-
 .app {
   max-width: 900px;
-  margin: 30px auto;
-  padding: 20px;
 }
 
-.app h1 {
-  color: #1d4ed8;
-  text-align: center;
-  font-size: 36px;
-}
-
+.app h1,
 .intro {
   text-align: center;
-  font-size: 18px;
-  color: #374151;
 }
 
 .card {
-  background-color: white;
-  padding: 22px;
   margin: 18px 0;
-  border-radius: 14px;
-  border: 1px solid #ddd;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-.card h2 {
-  color: #1e40af;
-}
-
-.card h3 {
-  color: #166534;
 }
 
 .progress {
@@ -252,32 +213,6 @@ textarea {
   font-family: Consolas, monospace;
 }
 
-pre {
-  direction: ltr;
-  text-align: left;
-  background-color: #111827;
-  color: #e5e7eb;
-  padding: 15px;
-  border-radius: 10px;
-  overflow-x: auto;
-  font-size: 15px;
-}
-
-button {
-  background-color: #16a34a;
-  color: white;
-  border: none;
-  padding: 12px 18px;
-  margin: 6px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #15803d;
-}
-
 button:disabled {
   opacity: 0.65;
   cursor: not-allowed;
@@ -296,4 +231,114 @@ button:disabled {
 .practice-lab,
 .certificate-section {
   display: none;
+}
+
+.final-result,
+.certificate-section {
+  text-align: center;
+}
+
+#finalMessage {
+  font-size: 20px;
+  font-weight: bold;
+  color: #166534;
+}
+
+#codeOutput {
+  background-color: #eef2ff;
+  color: #1f2937;
+  min-height: 55px;
+}
+
+.certificate {
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fef3c7, #dbeafe, #dcfce7);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.14);
+}
+
+.certificate-border {
+  padding: 45px 30px;
+  border: 6px double #c89b2c;
+  border-radius: 14px;
+  background: white;
+}
+
+.certificate-small,
+.signature {
+  color: #92400e;
+  font-weight: bold;
+}
+
+.certificate h2 {
+  color: #1d4ed8;
+  font-size: 42px;
+}
+
+#certificateName {
+  margin: 20px auto;
+  padding: 12px 20px;
+  max-width: 520px;
+  color: #166534;
+  font-size: 34px;
+  border-bottom: 3px solid #c89b2c;
+}
+
+.certificate-info {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero h1,
+  .app h1 {
+    font-size: 34px;
+  }
+
+  .features-grid,
+  .steps-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .certificate-section,
+  .certificate-section * {
+    visibility: visible;
+  }
+
+  .certificate-section {
+    display: block;
+  }
+
+  .certificate-section button {
+    display: none;
+  }
+
+  .certificate {
+    box-shadow: none;
+  }
 }
