@@ -218,15 +218,15 @@ function openPracticeOnly() {
 runCodeButton.addEventListener("click", function() {
   codeOutput.textContent = "";
 
-  function print(value) {
+  function output(value) {
     codeOutput.textContent = codeOutput.textContent + value + "\n";
   }
 
   try {
-    new Function("print", codeEditor.value)(print);
+    new Function("output", codeEditor.value)(output);
 
     if (codeOutput.textContent.trim() === "") {
-      codeOutput.textContent = "تم تشغيل الكود، لكن لم يتم طباعة أي نتيجة. استخدم print لعرض النتيجة هنا.";
+      codeOutput.textContent = "تم تشغيل الكود، لكن لم يتم طباعة أي نتيجة. استخدم output لعرض النتيجة هنا.";
     }
   } catch (error) {
     codeOutput.textContent = "يوجد خطأ في الكود: " + error.message;
