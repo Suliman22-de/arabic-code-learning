@@ -218,5 +218,19 @@ restartButton.addEventListener("click", restartQuiz);
 printButton.addEventListener("click", function() {
   window.print();
 });
+function openPracticeOnly() {
+  nameBox.style.display = "none";
+  lessonBox.style.display = "none";
+  quizBox.style.display = "none";
+  nextButton.style.display = "none";
+  finalResult.style.display = "none";
+  document.getElementById("certificateSection").style.display = "none";
 
+  practiceLab.style.display = "block";
+  practiceLab.scrollIntoView({ behavior: "smooth" });
+}
+
+if (window.location.hash === "#practice") {
+  openPracticeOnly();
+}
 showLesson();
