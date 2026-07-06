@@ -52,7 +52,8 @@ body {
   color: #374151;
 }
 
-.hero-actions {
+.hero-actions,
+.quiz-buttons {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
@@ -61,6 +62,7 @@ body {
 
 .start-link,
 .practice-link,
+.home-link,
 button {
   display: inline-block;
   color: white;
@@ -79,7 +81,8 @@ button {
   background-color: #16a34a;
 }
 
-.practice-link {
+.practice-link,
+.home-link {
   background-color: #1d4ed8;
 }
 
@@ -88,8 +91,25 @@ button:hover {
   background-color: #15803d;
 }
 
-.practice-link:hover {
+.practice-link:hover,
+.home-link:hover {
   background-color: #1e40af;
+}
+
+#prevButton {
+  background-color: #64748b;
+}
+
+#prevButton:hover {
+  background-color: #475569;
+}
+
+#clearAnswerButton {
+  background-color: #dc2626;
+}
+
+#clearAnswerButton:hover {
+  background-color: #b91c1c;
 }
 
 .code-preview,
@@ -307,7 +327,8 @@ button:disabled {
     text-align: center;
   }
 
-  .hero-actions {
+  .hero-actions,
+  .quiz-buttons {
     justify-content: center;
   }
 
@@ -336,11 +357,14 @@ button:disabled {
     display: block;
   }
 
-  .certificate-section button {
+  .certificate-section button,
+  .certificate-section .home-link {
     display: none;
   }
 
   .certificate {
     box-shadow: none;
+  }
+}    box-shadow: none;
   }
 }
