@@ -8,15 +8,48 @@
 </head>
 <body>
   <main class="app">
-    <header class="app-header">
+    <header class="app-header app-topbar">
       <a class="brand" href="index.html">
         <span class="brand-logo">{ }</span>
         <span class="brand-text">كودنا</span>
       </a>
+
+      <a class="topbar-link" href="index.html">الرئيسية</a>
     </header>
 
-    <h1>اختبار كودنا التفاعلي</h1>
-    <p class="intro">اختبار تدريبي مع نتيجة وشهادة ومنطقة تطبيق عملي.</p>
+    <section class="app-hero code-identity-hero">
+      <div class="code-hero-content">
+        <p class="badge">منصة عربية لتعلم البرمجة</p>
+        <h1>اختبار كودنا التفاعلي</h1>
+        <p class="intro">
+          تعلّم أساسيات HTML و CSS و JavaScript من خلال أسئلة وتطبيق عملي
+          بأسلوب يشبه بيئة البرمجة الحقيقية.
+        </p>
+
+        <div class="tech-tags">
+          <span>&lt;HTML&gt;</span>
+          <span>{ CSS }</span>
+          <span>JS()</span>
+        </div>
+      </div>
+
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <span></span>
+          <span></span>
+          <span></span>
+          <strong>kodna.js</strong>
+        </div>
+
+        <pre><code>const student = "مبتدئ";
+
+function learn() {
+  return "ابدأ البرمجة مع كودنا";
+}
+
+output(learn());</code></pre>
+      </div>
+    </section>
 
     <section class="card" id="nameBox">
       <label for="studentName">اسم المتعلم:</label>
@@ -54,6 +87,7 @@
       <p>الإجابات الصحيحة: <strong id="finalScore"></strong></p>
       <p>النسبة: <strong id="finalPercent"></strong></p>
       <p id="finalMessage"></p>
+
       <button id="restartButton">إعادة الاختبار</button>
       <a class="home-link" href="index.html">العودة إلى الصفحة الرئيسية</a>
     </section>
@@ -61,6 +95,7 @@
     <section class="card practice-lab" id="practiceLab">
       <h2>منطقة التطبيق العملي</h2>
       <p>جرّب كتابة كود JavaScript هنا وشغّله بنفسك.</p>
+
       <textarea id="codeEditor" placeholder='مثال: output("مرحبا");'></textarea>
       <button id="runCodeButton">تشغيل الكود</button>
       <pre id="codeOutput">النتيجة ستظهر هنا</pre>
