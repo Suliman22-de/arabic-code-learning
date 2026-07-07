@@ -17,7 +17,7 @@ body {
 }
 
 .app {
-  max-width: 900px;
+  max-width: 980px;
 }
 
 .app-header {
@@ -27,13 +27,14 @@ body {
 }
 
 .app-topbar {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid #e2e8f0;
   border-radius: 18px;
   padding: 14px 18px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
   backdrop-filter: blur(12px);
 }
@@ -80,14 +81,15 @@ body {
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
   align-items: center;
   margin-bottom: 24px;
-  padding: 32px;
-  border-radius: 22px;
+  padding: 34px;
+  min-height: 420px;
+  border-radius: 24px;
   background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 64, 175, 0.92)),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.97), rgba(30, 64, 175, 0.94)),
     #0f172a;
   color: white;
   border: 1px solid rgba(148, 163, 184, 0.25);
@@ -97,21 +99,21 @@ body {
 .code-identity-hero::before {
   content: "{ }  < />  const  let  function  ===  CSS  HTML  JS";
   position: absolute;
-  inset-inline-start: 20px;
-  top: 18px;
-  max-width: 92%;
+  left: 24px;
+  top: 22px;
+  max-width: 90%;
   color: rgba(255, 255, 255, 0.07);
-  font-size: 42px;
+  font-size: 38px;
   font-weight: bold;
-  letter-spacing: 4px;
-  line-height: 1.8;
+  letter-spacing: 3px;
+  line-height: 1.7;
   pointer-events: none;
 }
 
-.code-hero-content,
-.terminal-card {
+.code-hero-content {
   position: relative;
   z-index: 1;
+  text-align: right;
 }
 
 .badge {
@@ -125,27 +127,28 @@ body {
   margin-bottom: 16px;
 }
 
-.app h1,
 .code-identity-hero h1 {
   color: white;
   font-size: 44px;
   line-height: 1.25;
-  margin: 8px 0;
+  margin: 10px 0 14px;
 }
 
-.intro,
 .code-identity-hero .intro {
+  color: #dbeafe;
   font-size: 20px;
   line-height: 1.9;
-  color: #dbeafe;
   margin: 0;
+  text-align: right;
 }
 
 .tech-tags {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin-top: 20px;
+  justify-content: flex-end;
+  direction: ltr;
 }
 
 .tech-tags span {
@@ -156,15 +159,19 @@ body {
   border-radius: 999px;
   font-weight: bold;
   direction: ltr;
+  unicode-bidi: isolate;
 }
 
 .terminal-card {
+  position: relative;
+  z-index: 1;
   background: #020617;
   border: 1px solid #334155;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
   direction: ltr;
+  align-self: center;
 }
 
 .terminal-header {
@@ -205,6 +212,7 @@ body {
   background-size: 100% 32px;
   font-family: Consolas, monospace;
   line-height: 1.9;
+  white-space: pre-wrap;
 }
 
 .card {
@@ -423,18 +431,23 @@ button:disabled {
 
   .code-identity-hero {
     grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 24px;
     text-align: center;
-    padding: 22px;
   }
 
-  .app h1,
-  .code-identity-hero h1 {
-    font-size: 34px;
+  .code-hero-content,
+  .code-identity-hero .intro {
+    text-align: center;
   }
 
   .tech-tags,
   .quiz-buttons {
     justify-content: center;
+  }
+
+  .code-identity-hero h1 {
+    font-size: 34px;
   }
 }
 
