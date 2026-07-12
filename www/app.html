@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كودنا | الاختبار التفاعلي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header app-topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">{ }</span>
+        <span class="brand-text">كودنا</span>
+      </a>
 
+      <a class="topbar-link" href="index.html">الرئيسية</a>
+    </header>
+
+    <section class="app-hero code-identity-hero">
+      <div class="code-hero-content">
+        <p class="badge">منصة عربية لتعلم البرمجة</p>
+        <h1>اختبار كودنا التفاعلي</h1>
+        <p class="intro">
+          تعلّم أساسيات HTML و CSS و JavaScript من خلال أسئلة وتطبيق عملي
+          بأسلوب يشبه بيئة البرمجة الحقيقية.
+        </p>
+
+        <div class="tech-tags" dir="ltr">
+          <span>&lt;HTML&gt;</span>
+          <span>{ CSS }</span>
+          <span>JS()</span>
+        </div>
+      </div>
+
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <span></span>
+          <span></span>
+          <span></span>
+          <strong>kodna.js</strong>
+        </div>
+
+        <pre><code>const student = "مبتدئ";
+
+function learn() {
+  return "ابدأ البرمجة مع كودنا";
+}
+
+output(learn());</code></pre>
+      </div>
+    </section>
+
+    <section class="card" id="nameBox">
+      <label for="studentName">اسم المتعلم:</label>
+      <input id="studentName" type="text" placeholder="اكتب اسمك هنا">
+    </section>
+
+    <section class="card" id="lessonBox">
+      <p class="progress" id="progressText"></p>
+      <h2 id="lessonTitle"></h2>
+      <p id="lessonText"></p>
+
+      <h3>مثال الكود:</h3>
+      <pre><code id="lessonCode"></code></pre>
+
+      <h3>شرح الكود:</h3>
+      <p id="codeExplain"></p>
+    </section>
+
+    <section class="card" id="quizBox">
+      <h2>السؤال</h2>
+      <p id="question"></p>
+      <div id="answers"></div>
+      <p id="result"></p>
+    </section>
+
+    <div class="quiz-buttons">
+      <button id="prevButton">السؤال السابق</button>
+      <button id="clearAnswerButton">إلغاء الإجابة</button>
+      <button id="nextButton">السؤال التالي</button>
+    </div>
+
+    <section class="card final-result" id="finalResult">
+      <h2>النتيجة النهائية</h2>
+      <p>اسم المتعلم: <strong id="finalName"></strong></p>
+      <p>الإجابات الصحيحة: <strong id="finalScore"></strong></p>
+      <p>النسبة: <strong id="finalPercent"></strong></p>
+      <p id="finalMessage"></p>
+
+      <button id="restartButton">إعادة الاختبار</button>
+      <a class="home-link" href="index.html">العودة إلى الصفحة الرئيسية</a>
+    </section>
+
+    <section class="card practice-lab" id="practiceLab">
+      <h2>منطقة التطبيق العملي</h2>
+      <p>جرّب كتابة كود JavaScript هنا وشغّله بنفسك.</p>
+
+      <textarea id="codeEditor" placeholder='مثال: output("مرحبا");'></textarea>
+      <button id="runCodeButton">تشغيل الكود</button>
+      <pre id="codeOutput">النتيجة ستظهر هنا</pre>
+    </section>
+
+    <section class="certificate-section" id="certificateSection">
+      <div class="certificate">
+        <div class="certificate-border">
+          <p class="certificate-small">منصة كودنا</p>
+          <h2>شهادة إتمام</h2>
+          <p class="certificate-text">تشهد منصة كودنا بأن المتعلم</p>
+          <h3 id="certificateName">اسم المتعلم</h3>
+          <p class="certificate-text">قد أتم دورة أساسيات البرمجة للمبتدئين بنجاح</p>
+
+          <div class="certificate-info">
+            <p>النتيجة: <span id="certificateScore"></span></p>
+            <p>التاريخ: <span id="certificateDate"></span></p>
+          </div>
+
+          <p class="signature">إدارة كودنا</p>
+        </div>
+      </div>
+
+      <button id="printButton">طباعة الشهادة</button>
+      <a class="home-link" href="index.html">العودة إلى الصفحة الرئيسية</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
